@@ -1,29 +1,18 @@
 {
   "canisters": {
-    "multiple_actors_backend": {
-      "main": "src/multiple_actors_backend/main.mo",
+    "character_count": {
+      "main": "src/character_count/main.mo",
       "type": "motoko"
     },
-    "multiple_actors_frontend": {
-      "dependencies": [
-        "multiple_actors_backend"
-      ],
-      "frontend": {
-        "entrypoint": "src/multiple_actors_frontend/src/index.html"
-      },
-      "source": [
-        "src/multiple_actors_frontend/assets",
-        "dist/multiple_actors_frontend/"
-      ],
-      "type": "assets"
+    "daemon": {
+      "main": "src/daemon/main.mo",
+      "type": "motoko"
     }
   },
   "defaults": {
     "build": {
-      "args": "",
       "packtool": ""
     }
   },
-  "output_env_file": ".env",
   "version": 1
 }
